@@ -14,6 +14,8 @@
 		84A865A81B376B30004DD570 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A865A71B376B30004DD570 /* Images.xcassets */; };
 		84A865AB1B376B30004DD570 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A865A91B376B30004DD570 /* LaunchScreen.xib */; };
 		84A865B71B376B30004DD570 /* PrimeNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A865B61B376B30004DD570 /* PrimeNumberTests.m */; };
+		84B5F2CF1B3A14DC00495121 /* PrimeNumberProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */; };
+		84B5F2D21B3A191000495121 /* GeneratedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5F2D11B3A191000495121 /* GeneratedData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		84A865B61B376B30004DD570 /* PrimeNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimeNumberTests.m; sourceTree = "<group>"; };
 		84A865C21B376E0A004DD570 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		84A865C31B376E0A004DD570 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		84B5F2CD1B3A14DC00495121 /* PrimeNumberProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeNumberProvider.h; sourceTree = "<group>"; };
+		84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeNumberProvider.m; sourceTree = "<group>"; };
+		84B5F2D01B3A191000495121 /* GeneratedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedData.h; sourceTree = "<group>"; };
+		84B5F2D11B3A191000495121 /* GeneratedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,10 @@
 				84A865A71B376B30004DD570 /* Images.xcassets */,
 				84A865A91B376B30004DD570 /* LaunchScreen.xib */,
 				84A8659A1B376B30004DD570 /* Supporting Files */,
+				84B5F2CD1B3A14DC00495121 /* PrimeNumberProvider.h */,
+				84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */,
+				84B5F2D01B3A191000495121 /* GeneratedData.h */,
+				84B5F2D11B3A191000495121 /* GeneratedData.m */,
 			);
 			path = PrimeNumber;
 			sourceTree = "<group>";
@@ -222,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A865A31B376B30004DD570 /* ViewController.m in Sources */,
+				84B5F2CF1B3A14DC00495121 /* PrimeNumberProvider.m in Sources */,
+				84B5F2D21B3A191000495121 /* GeneratedData.m in Sources */,
 				84A865A01B376B30004DD570 /* AppDelegate.m in Sources */,
 				84A8659D1B376B30004DD570 /* main.m in Sources */,
 			);
