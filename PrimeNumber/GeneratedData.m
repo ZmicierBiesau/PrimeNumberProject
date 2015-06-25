@@ -36,6 +36,12 @@
         _arrayOfNumbers = [array mutableCopy];
         _maxValue = array[[array count] - 1];
     }
-    NSLog(@"%@", _arrayOfNumbers);
+    //NSLog(@"%@", _arrayOfNumbers);
 }
+
+- (NSMutableArray*) getCachedGeneratedArray
+{
+    return [_arrayOfNumbers mutableCopy];
+}
+
 @end

@@ -14,4 +14,5 @@
 
 + (instancetype) sharedGeneratedData;
 - (void) addGeneratedResults: (NSArray*) array;
+- (NSMutableArray*) getCachedGeneratedArray;
 @end

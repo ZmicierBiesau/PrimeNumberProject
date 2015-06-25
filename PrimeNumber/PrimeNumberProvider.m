@@ -23,10 +23,27 @@
 
 - (void) startGeneratingNumbersLessThen: (NSInteger) limit
 {
-    NSMutableArray *array = [NSMutableArray new];
-    for (NSInteger i = 2; i <= limit; i++) {
-        if ([self checkIfNumberPrime:i]) {
-            [array addObject:[NSNumber numberWithInteger:i]];
+    NSInteger startNumber = 2;
+    NSMutableArray *array = [[GeneratedData sharedGeneratedData] getCachedGeneratedArray];
+    if (!array) {
+        array = [NSMutableArray new];
+    }
+    else
+    {
+        startNumber = [array[[array count] - 1] integerValue];
+    }
+    
+    if (startNumber >= limit) {
+        while ([array[[array count] - 1] integerValue] > limit) {
+            [array removeObjectAtIndex:[array count] - 1];
+        }
+    }
+    else
+    {
+        for (NSInteger i = startNumber; i <= limit; i++) {
+            if ([self checkIfNumberPrime:i]) {
+                [array addObject:[NSNumber numberWithInteger:i]];
+            }
         }
     }
     [[GeneratedData sharedGeneratedData] addGeneratedResults:array];
