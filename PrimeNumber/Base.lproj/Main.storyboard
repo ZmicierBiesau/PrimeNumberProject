@@ -36,11 +36,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-Kb-ald">
                                                 <rect key="frame" x="0.0" y="40" width="200" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Generate">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
+                                                <state key="normal" title="Generate"/>
                                                 <connections>
                                                     <action selector="generateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZF-oD-rwg"/>
                                                 </connections>
@@ -77,10 +75,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xsz-GB-Gg7"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WYx-T3-kTH">
+                                <rect key="frame" x="290" y="390" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="GuD-jC-beX"/>
+                                    <constraint firstAttribute="height" constant="20" id="Xa6-9c-Tc4"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.88627450980392153" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="WYx-T3-kTH" firstAttribute="centerX" secondItem="vnD-51-18z" secondAttribute="centerX" id="4vH-DE-3y5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vnD-51-18z" secondAttribute="trailing" constant="-16" id="9pb-9Q-Ott"/>
+                            <constraint firstItem="WYx-T3-kTH" firstAttribute="centerY" secondItem="vnD-51-18z" secondAttribute="centerY" id="EbW-Rc-GAP"/>
                             <constraint firstItem="vnD-51-18z" firstAttribute="top" secondItem="Gl1-GO-27W" secondAttribute="bottom" id="UmR-vi-y2C"/>
                             <constraint firstItem="vnD-51-18z" firstAttribute="top" secondItem="Gl1-GO-27W" secondAttribute="bottom" id="UsR-Hw-hI2"/>
                             <constraint firstItem="vnD-51-18z" firstAttribute="height" secondItem="Gl1-GO-27W" secondAttribute="height" multiplier="2:1" id="XRh-IH-KHz"/>
@@ -92,6 +99,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="WYx-T3-kTH" id="b1y-8p-EhY"/>
+                        <outlet property="generateButton" destination="Jbz-Kb-ald" id="dAe-Wa-kRR"/>
                         <outlet property="tableView" destination="vnD-51-18z" id="VZO-u7-GfG"/>
                         <outlet property="textField" destination="8m6-ZH-8JG" id="fo8-LB-5Lg"/>
                     </connections>

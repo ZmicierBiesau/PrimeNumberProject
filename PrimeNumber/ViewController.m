@@ -12,6 +12,8 @@
 @interface ViewController ()<PrimeNumberProviderDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *generateButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -21,7 +23,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [_activityIndicator setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +33,18 @@
 
 - (IBAction)generateClick:(id)sender {
     [self.textField resignFirstResponder];
+    
+    if ([_textField.text doubleValue] > NSIntegerMax) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Your number is bigger than possible" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
+    [_generateButton setEnabled:NO];
+    [_generateButton setTitle:@"Generating" forState:UIControlStateNormal];
+    [_activityIndicator setHidden:NO];
+    [_activityIndicator startAnimating];
+    [_tableView setUserInteractionEnabled:NO];
     
     PrimeNumberProvider *primeNumber = [[PrimeNumberProvider alloc] initWithDelegate:self];
     [primeNumber startGeneratingNumbersLessThen:[_textField.text integerValue]];
@@ -60,11 +74,24 @@
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string  {
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet];
+    
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    
+    return [string isEqualToString:filtered];
+}
+
 #pragma mark - PrimeNumber Provider Delegate
 - (void) primeNumberProvider: (PrimeNumberProvider*) provider didGenerateArray: (NSArray*) generatedArray
 {
     generatedNumbers = generatedArray;
     [_tableView reloadData];
+    [_generateButton setTitle:@"Generate" forState:UIControlStateNormal];
+    [_generateButton setEnabled:YES];
+    [_activityIndicator stopAnimating];
+    [_activityIndicator setHidden:YES];
+    [_tableView setUserInteractionEnabled:YES];
 }
 
 @end

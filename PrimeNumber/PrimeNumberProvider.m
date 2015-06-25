@@ -23,35 +23,43 @@
 
 - (void) startGeneratingNumbersLessThen: (NSInteger) limit
 {
-    NSInteger startNumber = 2;
-    NSMutableArray *array = [[GeneratedData sharedGeneratedData] getCachedGeneratedArray];
-    if (!array) {
-        array = [NSMutableArray new];
-    }
-    else
-    {
-        startNumber = [array[[array count] - 1] integerValue];
-    }
-    
-    if (startNumber >= limit) {
-        while ([array[[array count] - 1] integerValue] > limit) {
-            [array removeObjectAtIndex:[array count] - 1];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        
+        NSInteger startNumber = 2;
+        NSMutableArray *array = [[GeneratedData sharedGeneratedData] getCachedGeneratedArray];
+        if (!array) {
+            array = [NSMutableArray new];
         }
-    }
-    else
-    {
-        for (NSInteger i = startNumber; i <= limit; i++) {
-            if ([self checkIfNumberPrime:i]) {
-                [array addObject:[NSNumber numberWithInteger:i]];
+        else
+        {
+            startNumber = [array[[array count] - 1] integerValue];
+        }
+        
+        if (startNumber >= limit) {
+            while ([array[[array count] - 1] integerValue] > limit) {
+                [array removeObjectAtIndex:[array count] - 1];
             }
         }
-    }
-    [[GeneratedData sharedGeneratedData] addGeneratedResults:array];
-    if ([_delegate respondsToSelector:@selector(primeNumberProvider:didGenerateArray:)]) {
-        [_delegate primeNumberProvider:self didGenerateArray:[array copy]];
-    }
+        else
+        {
+            for (NSInteger i = startNumber; i <= limit; i++) {
+                if ([self checkIfNumberPrime:i]) {
+                    [array addObject:[NSNumber numberWithInteger:i]];
+                }
+            }
+        }
+        [[GeneratedData sharedGeneratedData] addGeneratedResults:array];
+        if ([_delegate respondsToSelector:@selector(primeNumberProvider:didGenerateArray:)]) {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [_delegate primeNumberProvider:self didGenerateArray:[array copy]];
+            });
+        }
+    });
     //NSLog(@"%@", array);
 }
+
+
 
 - (BOOL) checkIfNumberPrime: (NSInteger) number
 {
