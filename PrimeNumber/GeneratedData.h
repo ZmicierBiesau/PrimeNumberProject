@@ -10,7 +10,8 @@
 
 @interface GeneratedData : NSObject
 
-@property (assign, nonatomic, readonly) NSInteger maxValue;
+@property (nonatomic, readonly, copy) NSNumber *maxValue;
 
-- (instancetype) sharedGeneratedData;
++ (instancetype) sharedGeneratedData;
+- (void) addGeneratedResults: (NSArray*) array;
 @end

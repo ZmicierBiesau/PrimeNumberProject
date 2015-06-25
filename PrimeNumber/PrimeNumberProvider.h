@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class PrimeNumberProvider;
 @protocol PrimeNumberProviderDelegate<NSObject>
 @required
-
+- (void) primeNumberProvider: (PrimeNumberProvider*) provider didGenerateArray: (NSArray*) generatedArray;
 @end
 
 @interface PrimeNumberProvider : NSObject

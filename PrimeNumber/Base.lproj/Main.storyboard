@@ -92,6 +92,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="vnD-51-18z" id="VZO-u7-GfG"/>
                         <outlet property="textField" destination="8m6-ZH-8JG" id="fo8-LB-5Lg"/>
                     </connections>
                 </viewController>

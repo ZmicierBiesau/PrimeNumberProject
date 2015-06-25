@@ -29,7 +29,11 @@
             [array addObject:[NSNumber numberWithInteger:i]];
         }
     }
-    NSLog(@"%@", array);
+    [[GeneratedData sharedGeneratedData] addGeneratedResults:array];
+    if ([_delegate respondsToSelector:@selector(primeNumberProvider:didGenerateArray:)]) {
+        [_delegate primeNumberProvider:self didGenerateArray:[array copy]];
+    }
+    //NSLog(@"%@", array);
 }
 
 - (BOOL) checkIfNumberPrime: (NSInteger) number

@@ -10,14 +10,14 @@
 
 @interface GeneratedData()
 
-@property (assign, nonatomic) NSInteger maxValue;
+@property (nonatomic, copy) NSNumber *maxValue;
 @property (strong, nonatomic) NSMutableArray *arrayOfNumbers;
 @end
 
 @implementation GeneratedData
 
 
-- (instancetype) sharedGeneratedData
++ (instancetype) sharedGeneratedData
 {
     static GeneratedData *data = nil;
     static dispatch_once_t p;
@@ -25,5 +25,17 @@
         data = [GeneratedData new];
     });
     return data;
+}
+
+- (void) addGeneratedResults: (NSArray*) array
+{
+    if (!_maxValue) {
+        _maxValue = [NSNumber numberWithInteger:0];
+    }
+    if (array[[array count] - 1] > _maxValue) {
+        _arrayOfNumbers = [array mutableCopy];
+        _maxValue = array[[array count] - 1];
+    }
+    NSLog(@"%@", _arrayOfNumbers);
 }
 @end
