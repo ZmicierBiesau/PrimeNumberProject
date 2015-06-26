@@ -51,7 +51,7 @@
         }
         [[GeneratedData sharedGeneratedData] addGeneratedResults:array];
         if ([_delegate respondsToSelector:@selector(primeNumberProvider:didGenerateArray:)]) {
-            dispatch_sync(dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
                 [_delegate primeNumberProvider:self didGenerateArray:[array copy]];
             });
         }

@@ -40,6 +40,12 @@
         return;
     }
     
+    if ([_textField.text doubleValue] < 2) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Your number is less than the smallest prime number" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
     [_generateButton setEnabled:NO];
     [_generateButton setTitle:@"Generating" forState:UIControlStateNormal];
     [_activityIndicator setHidden:NO];
