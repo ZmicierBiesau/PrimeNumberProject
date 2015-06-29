@@ -14,6 +14,8 @@
 		84A865A81B376B30004DD570 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A865A71B376B30004DD570 /* Images.xcassets */; };
 		84A865AB1B376B30004DD570 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A865A91B376B30004DD570 /* LaunchScreen.xib */; };
 		84A865B71B376B30004DD570 /* PrimeNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A865B61B376B30004DD570 /* PrimeNumberTests.m */; };
+		84B55CDA1B40B87E00757FFA /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B55CD91B40B87E00757FFA /* HistoryTableViewController.m */; };
+		84B55CDD1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B55CDB1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld */; };
 		84B5F2CF1B3A14DC00495121 /* PrimeNumberProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */; };
 		84B5F2D21B3A191000495121 /* GeneratedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B5F2D11B3A191000495121 /* GeneratedData.m */; };
 /* End PBXBuildFile section */
@@ -42,8 +44,11 @@
 		84A865B01B376B30004DD570 /* PrimeNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A865B51B376B30004DD570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A865B61B376B30004DD570 /* PrimeNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimeNumberTests.m; sourceTree = "<group>"; };
-		84A865C21B376E0A004DD570 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		84A865C31B376E0A004DD570 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		84B55CD81B40B87E00757FFA /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		84B55CD91B40B87E00757FFA /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		84B55CDC1B40BCA000757FFA /* PrimeNumberModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrimeNumberModel.xcdatamodel; sourceTree = "<group>"; };
+		84B55CDE1B40C2BA00757FFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		84B55CDF1B40C2BA00757FFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		84B5F2CD1B3A14DC00495121 /* PrimeNumberProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeNumberProvider.h; sourceTree = "<group>"; };
 		84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeNumberProvider.m; sourceTree = "<group>"; };
 		84B5F2D01B3A191000495121 /* GeneratedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedData.h; sourceTree = "<group>"; };
@@ -101,6 +106,9 @@
 				84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */,
 				84B5F2D01B3A191000495121 /* GeneratedData.h */,
 				84B5F2D11B3A191000495121 /* GeneratedData.m */,
+				84B55CD81B40B87E00757FFA /* HistoryTableViewController.h */,
+				84B55CD91B40B87E00757FFA /* HistoryTableViewController.m */,
+				84B55CDB1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld */,
 			);
 			path = PrimeNumber;
 			sourceTree = "<group>";
@@ -231,9 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B55CDA1B40B87E00757FFA /* HistoryTableViewController.m in Sources */,
 				84A865A31B376B30004DD570 /* ViewController.m in Sources */,
 				84B5F2CF1B3A14DC00495121 /* PrimeNumberProvider.m in Sources */,
 				84B5F2D21B3A191000495121 /* GeneratedData.m in Sources */,
+				84B55CDD1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld in Sources */,
 				84A865A01B376B30004DD570 /* AppDelegate.m in Sources */,
 				84A8659D1B376B30004DD570 /* main.m in Sources */,
 			);
@@ -262,7 +272,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84A865A51B376B30004DD570 /* Base */,
-				84A865C21B376E0A004DD570 /* ru */,
+				84B55CDE1B40C2BA00757FFA /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -271,7 +281,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84A865AA1B376B30004DD570 /* Base */,
-				84A865C31B376E0A004DD570 /* ru */,
+				84B55CDF1B40C2BA00757FFA /* ru */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -446,6 +456,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84B55CDB1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84B55CDC1B40BCA000757FFA /* PrimeNumberModel.xcdatamodel */,
+			);
+			currentVersion = 84B55CDC1B40BCA000757FFA /* PrimeNumberModel.xcdatamodel */;
+			path = PrimeNumberModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84A8658F1B376B30004DD570 /* Project object */;
 }

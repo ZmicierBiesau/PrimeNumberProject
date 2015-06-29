@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6251" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Number" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Result" syncable="YES">
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="numbers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Number" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Result" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Number" positionX="-54" positionY="0" width="128" height="58"/>
+    </elements>
+</model>
