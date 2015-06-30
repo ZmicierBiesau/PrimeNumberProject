@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PrimeNumberProvider.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()<PrimeNumberProviderDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_activityIndicator setHidden:YES];
+    self.navigationController.navigationBar.topItem.title = @"Home";
 }
 
 - (void)didReceiveMemoryWarning {

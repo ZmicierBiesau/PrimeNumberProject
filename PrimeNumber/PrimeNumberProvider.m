@@ -8,6 +8,7 @@
 
 #import "PrimeNumberProvider.h"
 #import "GeneratedData.h"
+#import "AppDelegate.h"
 
 @implementation PrimeNumberProvider
 
@@ -50,6 +51,7 @@
             }
         }
         [[GeneratedData sharedGeneratedData] addGeneratedResults:array];
+        [self insertNewObject:[array copy]];
         if ([_delegate respondsToSelector:@selector(primeNumberProvider:didGenerateArray:)]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [_delegate primeNumberProvider:self didGenerateArray:[array copy]];
@@ -80,6 +82,29 @@
         }
     }
     return YES;
+}
+
+
+- (void)insertNewObject:(NSArray*) numberArray{
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Result" inManagedObjectContext:context];
+    
+
+    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    
+    NSData *arrayData = [NSKeyedArchiver archivedDataWithRootObject:numberArray];
+    [newManagedObject setValue:arrayData forKey:@"numberData"];
+    
+    // Save the context.
+    NSError *error = nil;
+    if (![context save:&error]) {
+     
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 @end

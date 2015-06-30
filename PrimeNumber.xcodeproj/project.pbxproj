@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31DA57051B43064F001184E4 /* SingleResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DA57031B43064F001184E4 /* SingleResultTableViewController.m */; };
+		31DA57061B43064F001184E4 /* SingleResultTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31DA57041B43064F001184E4 /* SingleResultTableViewController.xib */; };
 		84A8659D1B376B30004DD570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8659C1B376B30004DD570 /* main.m */; };
 		84A865A01B376B30004DD570 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8659F1B376B30004DD570 /* AppDelegate.m */; };
 		84A865A31B376B30004DD570 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A865A21B376B30004DD570 /* ViewController.m */; };
@@ -31,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31DA57021B43064F001184E4 /* SingleResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleResultTableViewController.h; sourceTree = "<group>"; };
+		31DA57031B43064F001184E4 /* SingleResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleResultTableViewController.m; sourceTree = "<group>"; };
+		31DA57041B43064F001184E4 /* SingleResultTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleResultTableViewController.xib; sourceTree = "<group>"; };
 		84A865971B376B30004DD570 /* PrimeNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A8659B1B376B30004DD570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A8659C1B376B30004DD570 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,8 +52,6 @@
 		84B55CD81B40B87E00757FFA /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
 		84B55CD91B40B87E00757FFA /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		84B55CDC1B40BCA000757FFA /* PrimeNumberModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrimeNumberModel.xcdatamodel; sourceTree = "<group>"; };
-		84B55CDE1B40C2BA00757FFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		84B55CDF1B40C2BA00757FFA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		84B5F2CD1B3A14DC00495121 /* PrimeNumberProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeNumberProvider.h; sourceTree = "<group>"; };
 		84B5F2CE1B3A14DC00495121 /* PrimeNumberProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeNumberProvider.m; sourceTree = "<group>"; };
 		84B5F2D01B3A191000495121 /* GeneratedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedData.h; sourceTree = "<group>"; };
@@ -109,6 +112,9 @@
 				84B55CD81B40B87E00757FFA /* HistoryTableViewController.h */,
 				84B55CD91B40B87E00757FFA /* HistoryTableViewController.m */,
 				84B55CDB1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld */,
+				31DA57021B43064F001184E4 /* SingleResultTableViewController.h */,
+				31DA57031B43064F001184E4 /* SingleResultTableViewController.m */,
+				31DA57041B43064F001184E4 /* SingleResultTableViewController.xib */,
 			);
 			path = PrimeNumber;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DA57061B43064F001184E4 /* SingleResultTableViewController.xib in Resources */,
 				84A865A61B376B30004DD570 /* Main.storyboard in Resources */,
 				84A865AB1B376B30004DD570 /* LaunchScreen.xib in Resources */,
 				84A865A81B376B30004DD570 /* Images.xcassets in Resources */,
@@ -243,6 +250,7 @@
 				84A865A31B376B30004DD570 /* ViewController.m in Sources */,
 				84B5F2CF1B3A14DC00495121 /* PrimeNumberProvider.m in Sources */,
 				84B5F2D21B3A191000495121 /* GeneratedData.m in Sources */,
+				31DA57051B43064F001184E4 /* SingleResultTableViewController.m in Sources */,
 				84B55CDD1B40BCA000757FFA /* PrimeNumberModel.xcdatamodeld in Sources */,
 				84A865A01B376B30004DD570 /* AppDelegate.m in Sources */,
 				84A8659D1B376B30004DD570 /* main.m in Sources */,
@@ -272,7 +280,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				84A865A51B376B30004DD570 /* Base */,
-				84B55CDE1B40C2BA00757FFA /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -281,7 +288,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				84A865AA1B376B30004DD570 /* Base */,
-				84B55CDF1B40C2BA00757FFA /* ru */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
