@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3IO-Rc-Lrc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3IO-Rc-Lrc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -45,21 +45,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gl1-GO-27W">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
+                                <rect key="frame" x="16" y="0.0" width="568" height="179"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZI-MC-ob6">
-                                        <rect key="frame" x="200" y="34" width="200" height="110"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZI-MC-ob6">
+                                        <rect key="frame" x="189" y="34" width="190" height="110"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter limit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8m6-ZH-8JG">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter limit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8m6-ZH-8JG">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="a0A-jx-L1z"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-Kb-ald">
-                                                <rect key="frame" x="0.0" y="40" width="200" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-Kb-ald">
+                                                <rect key="frame" x="0.0" y="38" width="190" height="33"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,8 +68,8 @@
                                                     <action selector="generateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZF-oD-rwg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75T-Us-HOb">
-                                                <rect key="frame" x="0.0" y="80" width="200" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75T-Us-HOb">
+                                                <rect key="frame" x="0.0" y="76" width="190" height="34"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <state key="normal" title="History">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,10 +87,10 @@
                                             <constraint firstItem="Jbz-Kb-ald" firstAttribute="leading" secondItem="NZI-MC-ob6" secondAttribute="leading" id="9m1-TF-5b8"/>
                                             <constraint firstItem="8m6-ZH-8JG" firstAttribute="height" secondItem="Jbz-Kb-ald" secondAttribute="height" multiplier="1:1" id="FS1-gJ-rIF"/>
                                             <constraint firstItem="8m6-ZH-8JG" firstAttribute="top" secondItem="NZI-MC-ob6" secondAttribute="top" id="Io2-0u-dVp"/>
-                                            <constraint firstItem="Jbz-Kb-ald" firstAttribute="top" secondItem="8m6-ZH-8JG" secondAttribute="bottom" constant="10" id="LGV-DU-eem"/>
-                                            <constraint firstItem="75T-Us-HOb" firstAttribute="top" secondItem="Jbz-Kb-ald" secondAttribute="bottom" constant="10" id="MZx-FH-lNQ"/>
+                                            <constraint firstItem="Jbz-Kb-ald" firstAttribute="top" secondItem="8m6-ZH-8JG" secondAttribute="bottom" constant="5" id="LGV-DU-eem"/>
+                                            <constraint firstItem="75T-Us-HOb" firstAttribute="top" secondItem="Jbz-Kb-ald" secondAttribute="bottom" constant="5" id="MZx-FH-lNQ"/>
                                             <constraint firstAttribute="trailing" secondItem="8m6-ZH-8JG" secondAttribute="trailing" id="P8o-ix-iaR"/>
-                                            <constraint firstAttribute="height" constant="110" id="eQR-Yq-tVX"/>
+                                            <constraint firstAttribute="height" priority="250" constant="110" id="R2S-o4-wzg"/>
                                             <constraint firstAttribute="bottom" secondItem="75T-Us-HOb" secondAttribute="bottom" id="fdW-hv-q6v"/>
                                             <constraint firstItem="8m6-ZH-8JG" firstAttribute="leading" secondItem="NZI-MC-ob6" secondAttribute="leading" id="swW-BJ-MZm"/>
                                             <constraint firstAttribute="trailing" secondItem="Jbz-Kb-ald" secondAttribute="trailing" id="uyO-oT-wO6"/>
@@ -101,9 +101,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="NZI-MC-ob6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Gl1-GO-27W" secondAttribute="top" id="H4d-qo-WME"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NZI-MC-ob6" secondAttribute="bottom" id="PWp-QM-Yht"/>
+                                    <constraint firstAttribute="centerY" secondItem="NZI-MC-ob6" secondAttribute="centerY" id="cbk-1J-34j"/>
                                     <constraint firstAttribute="width" secondItem="NZI-MC-ob6" secondAttribute="width" multiplier="3:1" id="eLa-lH-whs"/>
                                     <constraint firstAttribute="centerX" secondItem="NZI-MC-ob6" secondAttribute="centerX" id="ee7-iD-M9F"/>
-                                    <constraint firstAttribute="centerY" secondItem="NZI-MC-ob6" secondAttribute="centerY" id="xFn-Qt-pXz"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WYx-T3-kTH">
@@ -129,16 +131,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="vnD-51-18z" secondAttribute="trailing" constant="-16" id="9pb-9Q-Ott"/>
                             <constraint firstItem="WYx-T3-kTH" firstAttribute="centerY" secondItem="vnD-51-18z" secondAttribute="centerY" id="EbW-Rc-GAP"/>
                             <constraint firstItem="vnD-51-18z" firstAttribute="top" secondItem="Gl1-GO-27W" secondAttribute="bottom" id="UmR-vi-y2C"/>
-                            <constraint firstItem="vnD-51-18z" firstAttribute="top" secondItem="Gl1-GO-27W" secondAttribute="bottom" id="UsR-Hw-hI2"/>
                             <constraint firstItem="vnD-51-18z" firstAttribute="height" secondItem="Gl1-GO-27W" secondAttribute="height" multiplier="2:1" id="XRh-IH-KHz"/>
                             <constraint firstItem="Gl1-GO-27W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Yf6-2t-KAn"/>
-                            <constraint firstItem="Gl1-GO-27W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="auN-Do-Oj8"/>
+                            <constraint firstItem="Gl1-GO-27W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="auN-Do-Oj8"/>
                             <constraint firstItem="vnD-51-18z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="bXj-IG-xtj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gl1-GO-27W" secondAttribute="trailing" constant="-16" id="q0R-dF-dvQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gl1-GO-27W" secondAttribute="trailing" id="q0R-dF-dvQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vnD-51-18z" secondAttribute="bottom" id="r5d-nT-Hf4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8Mw-do-6El"/>
+                    <navigationItem key="navigationItem" title="Home" id="8Mw-do-6El"/>
                     <connections>
                         <outlet property="activityIndicator" destination="WYx-T3-kTH" id="b1y-8p-EhY"/>
                         <outlet property="generateButton" destination="Jbz-Kb-ald" id="dAe-Wa-kRR"/>

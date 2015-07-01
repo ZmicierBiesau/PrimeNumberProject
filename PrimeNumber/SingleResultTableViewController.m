@@ -29,7 +29,7 @@
 - (void)configureView {
     if (self.detailItem) {
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        [format setDateFormat:@"dd-MM-yyyy hh:mm:ss"];
+        [format setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
         self.title = [format stringFromDate:[self.detailItem valueForKey:@"timeStamp"] ];        
     }
 }

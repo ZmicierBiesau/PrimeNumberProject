@@ -67,7 +67,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    [format setDateFormat:@"dd-MM-yyyy hh:mm:ss"];
+    [format setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
     cell.textLabel.text = [format stringFromDate:[object valueForKey:@"timeStamp"] ];
 }
 

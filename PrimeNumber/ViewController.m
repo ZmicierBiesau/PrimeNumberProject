@@ -24,8 +24,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_activityIndicator setHidden:YES];
-    self.navigationController.navigationBar.topItem.title = @"Home";
+    [_activityIndicator setHidden:YES];    
 }
 
 - (void)didReceiveMemoryWarning {
