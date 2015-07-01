@@ -44,7 +44,7 @@
         }
         else
         {
-            for (NSInteger i = ++startNumber; i <= limit; i++) {
+            for (NSInteger i = ++startNumber; i < limit; i++) {
                 if ([self checkIfNumberPrime:i]) {
                     [array addObject:[NSNumber numberWithInteger:i]];
                 }
