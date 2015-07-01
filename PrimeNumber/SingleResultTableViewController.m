@@ -27,21 +27,20 @@
 }
 
 - (void)configureView {
-    // Update the user interface for the detail item.
     if (self.detailItem) {
-        //self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd-MM-yyyy hh:mm:ss"];
+        self.title = [format stringFromDate:[self.detailItem valueForKey:@"timeStamp"] ];        
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -55,9 +54,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"numberCell"];
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"numberCell" forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"numberCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"numberCell"];
+    }
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [numberArray objectAtIndex:indexPath.row]];
     
     return cell;

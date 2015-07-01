@@ -66,10 +66,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"generatedNumberIdentifier"];
-    if (cell) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@", generatedNumbers[indexPath.row]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"generatedNumberIdentifier"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"generatedNumberIdentifier"];
     }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", generatedNumbers[indexPath.row]];
     return cell;
 }
 

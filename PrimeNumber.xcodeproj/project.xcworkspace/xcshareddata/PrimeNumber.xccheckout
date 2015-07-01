@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>350DF0DB-E179-4218-9787-9A2D7C7A7866</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>PrimeNumber</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>33BB81B641DF5BF38AA050D17E4F1BC3509B5E67</key>
 		<string>https://github.com/ZmicierBiesau/PrimeNumberProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PrimeNumber.xcodeproj/project.xcworkspace</string>
+	<string>PrimeNumber.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>33BB81B641DF5BF38AA050D17E4F1BC3509B5E67</key>
