@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *generateButton;
+@property (weak, nonatomic) IBOutlet UIButton *historyButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
@@ -24,7 +25,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_activityIndicator setHidden:YES];    
+    [_activityIndicator setHidden:YES];
+    self.generateButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.historyButton.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,16 +38,21 @@
 - (IBAction)generateClick:(id)sender {
     [self.textField resignFirstResponder];
     
-    if ([_textField.text doubleValue] > NSIntegerMax) {
+    if ([_textField.text integerValue] > NSIntegerMax) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Your number is bigger than possible" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alert show];
         return;
     }
     
-    if ([_textField.text doubleValue] < 2) {
+    if ([_textField.text integerValue] < 2) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Your number is less than the smallest prime number" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alert show];
         return;
+    }
+    
+    if ([_textField.text integerValue] > 1000000) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"It may take a long time to count them all" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alert show];
     }
     
     [_generateButton setEnabled:NO];
